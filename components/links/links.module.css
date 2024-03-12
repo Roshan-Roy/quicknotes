@@ -1,0 +1,21 @@
+.link {
+    display: block;
+    border-radius: 100vh;
+    text-align: center;
+    padding: 15px 0;
+    gap: 30px;
+    font-size: 14px;
+}
+
+.link.login {
+    border: 2px solid var(--cb);
+}
+
+.link.signup {
+    background-color: var(--t1);
+    color: var(--sb);
+}
+
+.active {
+    background-color: var(--cb);
+}

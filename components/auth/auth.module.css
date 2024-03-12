@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form input {
+    background-color: var(--cb);
+    color: var(--t1);
+    border: none;
+    border-radius: 20px;
+    height: 45px;
+    padding: 0 18px;
+    color: var(--t1)
+}
+
+.form input::placeholder {
+    color: var(--t2);
+}
+
+.form div button {
+    border: none;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 14px;
+    flex: 1;
+    color: white;
+    background-color: var(--pc);
+}
+
+.form div {
+    display: flex;
+    gap: 10px;
+}
+
+.form div button.disabled {
+    opacity: 0.7;
+}

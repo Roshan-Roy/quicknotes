@@ -1,0 +1,43 @@
+.nav_btn {
+  display: flex;
+  height: 25px;
+  width: 35px;
+  position: relative;
+  cursor:pointer;
+}
+
+.nav_btn div {
+  height: 4px;
+  background-color: var(--t1);
+  border-radius: 100vh;
+  position: absolute;
+  width: 100%;
+  transition: .2s linear;
+}
+
+.nav_btn div:nth-child(1) {
+  top: 0;
+}
+
+.nav_btn div:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav_btn div:nth-child(3) {
+  bottom: 0;
+}
+
+.nav_btn.open div:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.nav_btn.open div:nth-child(2) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.nav_btn.open div:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
