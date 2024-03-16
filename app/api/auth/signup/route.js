@@ -5,9 +5,6 @@ import bcrypt from "bcrypt"
 export const POST = async (req) => {
     try {
         const { name, username, password } = await req.json()
-        if (!name || !username || !password) {
-            return NextResponse.json({ message: "Fill all fields" }, { status: "400" })
-        }
         const existingUser = await prisma.cuser.findUnique({
             where: {
                 username

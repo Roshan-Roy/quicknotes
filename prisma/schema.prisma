@@ -45,3 +45,9 @@ model Account {
 
   @@unique([provider, providerAccountId])
 }
+
+model Note {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  note   String
+  userId String @db.ObjectId
+}

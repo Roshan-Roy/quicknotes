@@ -19,8 +19,10 @@ export default function RootLayout({ children }) {
         <Provider>
           <Navbar />
           <Toaster
+            position="top-center"
             containerStyle={{
-              top: 80
+              top: 80,
+              bottom: 90
             }}
             toastOptions={{
               style: {
