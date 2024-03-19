@@ -1,11 +1,15 @@
-import { Inter } from "next/font/google"
+//import { Inter } from "next/font/google"
+import { Prompt } from "next/font/google"
 import "./globals.css"
 
 import Navbar from "@/components/navbar/Navbar"
 import { Toaster } from "react-hot-toast"
 import Provider from "./context/AuthContext"
 
-const inter = Inter({ subsets: ["latin"] });
+const prompt = Prompt({
+  weight: "400",
+  subsets: ["latin"]
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={prompt.className}>
+      <body>
         <Provider>
           <Navbar />
           <Toaster

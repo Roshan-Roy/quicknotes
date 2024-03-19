@@ -1,6 +1,11 @@
+import PageLoader from "@/components/pageloader/PageLoader"
+import styles from "./page.module.css"
+
 const loading = () => {
   return (
-    <div>loading...</div>
+    <div className={styles.loading_wrapper}>
+      <PageLoader />
+    </div>
   )
 }
 

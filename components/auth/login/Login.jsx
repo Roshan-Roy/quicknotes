@@ -7,6 +7,13 @@ import toast from "react-hot-toast"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Btnloader from "@/components/btnloader/Btnloader"
+import { Prompt } from "next/font/google"
+
+const prompt = Prompt({
+    weight: "400",
+    subsets: ["latin"]
+});
+
 
 const Login = () => {
     const [cLoading, uptCLoading] = useState(false)
@@ -58,7 +65,7 @@ const Login = () => {
                 <input type="text" placeholder="Username" value={data.username} onChange={(elm) => uptData((e) => ({ ...e, username: elm.target.value }))} />
                 <input type="password" placeholder="Password" value={data.password} onChange={(elm) => uptData((e) => ({ ...e, password: elm.target.value }))} />
                 <div>
-                    <button type="submit" disabled={disabled} className={disabled ? styles.disabled : null}>Login</button>
+                    <button type="submit" disabled={disabled} className={`${prompt.className} ${disabled ? styles.disabled : null}`}>Login</button>
                     {cLoading && <Btnloader />}
                 </div>
             </form>

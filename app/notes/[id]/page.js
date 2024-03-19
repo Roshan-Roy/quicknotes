@@ -8,13 +8,13 @@ const NotePage = async ({ params }) => {
     if (!session) {
         redirect("/login")
     }
-    console.log("rendering")
     const { id } = params
     const res = await fetch(`${process.env.NEXTAUTH_URL}/api/notes/get/${session.user.id}?noteid=${id}`, {
         cache: "no-store"
     })
     if (!res.ok) {
-        throw new Error("Something went wrong")
+        const { message } = await res.json()
+        throw new Error(message)
     }
     const { data } = await res.json()
     return <NoteOps {...session} {...data} />

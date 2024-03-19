@@ -1,5 +1,32 @@
-.wrapper{
+.wrapper {
     margin: 0 auto;
     width: 85%;
     padding: 20px 0;
+}
+
+.loading_wrapper {
+    height: calc(100dvh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.le_wrapper {
+    width: 100%;
+    height: calc(100dvh - 70px);
+    color: var(--t2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.le_wrapper div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.le_wrapper .le_svg {
+    font-size: 80px;
 }

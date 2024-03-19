@@ -61,7 +61,7 @@ const Navbar = () => {
             <div className={styles.border}></div>
             <div className={styles.wrapper}>
                 <div className={styles.container}>
-                    <h2>QuickNotes</h2>
+                    <h2>QNotes</h2>
                     <div className={`${styles.links_wrapper} ${navbarOpen && styles.shown}`}>{routeList.map(e => <Links key={e.name} func={handleCloseNavbar} {...e} />)}</div>
                     <Navbtn open={navbarOpen} func={handleNavBtnClick} />
                 </div>

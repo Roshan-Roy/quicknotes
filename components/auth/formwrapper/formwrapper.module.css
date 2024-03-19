@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 .form_container .github.disabled {
     opacity: 0.7;

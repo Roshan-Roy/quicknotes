@@ -3,6 +3,13 @@ import styles from "./formwrapper.module.css"
 import { signIn } from "next-auth/react"
 import Btnloader from "@/components/btnloader/Btnloader"
 import { FaGithub } from "react-icons/fa"
+import { Prompt } from "next/font/google"
+
+const prompt = Prompt({
+    weight: "400",
+    subsets: ["latin"]
+  });
+  
 
 const Formwrapper = ({
     children,
@@ -24,13 +31,13 @@ const Formwrapper = ({
                     {auth &&
                         (
                             <div className={styles.btn_container}>
-                                <button className={`${styles.github} ${disabled && styles.disabled}`} disabled={disabled} onClick={() => {
+                                <button className={`${prompt.className} ${styles.github} ${disabled && styles.disabled}`} disabled={disabled} onClick={() => {
                                     signIn("github", {
                                         callbackUrl: "/notes"
                                     })
                                     uptDisabled(true)
                                     uptGLoading(true)
-                                }}><FaGithub className={styles.github_icon}/> {!gLoading && "Login with Github"}</button>
+                                }}><FaGithub className={styles.github_icon}/> {!gLoading && "Github Login"}</button>
                                 {gLoading && <Btnloader />}
                             </div>
                         )

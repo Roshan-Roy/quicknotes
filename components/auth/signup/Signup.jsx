@@ -6,6 +6,13 @@ import toast from "react-hot-toast"
 import { useRouter } from "next/navigation"
 import Btnloader from "@/components/btnloader/Btnloader"
 import styles from "../auth.module.css"
+import { Prompt } from "next/font/google"
+
+const prompt = Prompt({
+  weight: "400",
+  subsets: ["latin"]
+});
+
 
 const Signup = () => {
   const router = useRouter()
@@ -65,7 +72,7 @@ const Signup = () => {
         <input type="text" placeholder="Username" value={data.username} onChange={(elm) => uptData(e => ({ ...e, username: elm.target.value }))} />
         <input type="password" placeholder="Password" value={data.password} onChange={(elm) => uptData(e => ({ ...e, password: elm.target.value }))} />
         <div>
-          <button type="submit" className={disabled ? styles.disabled : null} disabled={disabled}>Sign Up</button>
+          <button type="submit" className={`${prompt.className} ${disabled ? styles.disabled : null}`} disabled={disabled}>Sign Up</button>
           {disabled && <Btnloader />}
         </div>
       </form>

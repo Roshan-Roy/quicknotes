@@ -5,6 +5,13 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Btnloader from "../btnloader/Btnloader"
 import toast from "react-hot-toast"
+import { Prompt } from "next/font/google"
+
+const prompt = Prompt({
+    weight: "400",
+    subsets: ["latin"]
+  });
+  
 
 const Add = ({ user }) => {
     const router = useRouter()
@@ -39,7 +46,7 @@ const Add = ({ user }) => {
         <div className={styles.wrapper}>
             <textarea placeholder="New Note" value={note} onChange={(elm) => { uptNote(elm.target.value) }}></textarea>
             <div>
-                <button className={disabled ? styles.disabled : null} onClick={handleAddBtnClick} disabled={disabled}>Add</button>
+                <button className={`${prompt.className} ${disabled ? styles.disabled : null}`} onClick={handleAddBtnClick} disabled={disabled}>Add</button>
                 {disabled && <Btnloader />}
             </div>
         </div>
