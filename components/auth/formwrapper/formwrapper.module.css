@@ -8,6 +8,7 @@
 
 .container {
     width: 80%;
+    max-width: 300px;
     background-color: var(--sb);
     text-align: center;
     border-radius: 40px;

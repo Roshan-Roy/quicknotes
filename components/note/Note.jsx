@@ -1,14 +1,11 @@
-import Link from "next/link"
+"use client"
+        
 import styles from "./note.module.css"
-
+import { useRouter } from "next/navigation"
+      
 const Note = ({ id, note }) => {
-    return (
-        <Link href={`/notes/${id}`}>
-            <div className={styles.container}>
-                <p>{note}</p>
-            </div>
-        </Link>
-    )
-}
+    const router = useRouter()
+    return <p onClick={() => {router.push(`/notes/${id}`)}} className={styles.container}>{note}</p>
+}   
 
 export default Note

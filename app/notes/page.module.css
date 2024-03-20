@@ -2,6 +2,30 @@
     margin: 0 auto;
     width: 85%;
     padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .loading_wrapper {
