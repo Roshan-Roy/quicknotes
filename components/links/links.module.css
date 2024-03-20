@@ -5,7 +5,12 @@
     padding: 15px 0;
     gap: 30px;
     font-size: 14px;
-    width: 110px;
+}
+
+@media screen and (min-width: 850px) {
+    .link {
+        width: 110px;
+    }
 }
 
 .link.login {

@@ -1,21 +1,24 @@
-.wrapper{
+.wrapper {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    padding: 30px 0 50px 0;   
+    padding: 30px 0 50px 0;
 }
-.wrapper p{
-    margin:20px 0;
+
+.wrapper p {
+    margin: 20px 0;
     text-align: justify;
     line-height: 1.7;
     font-size: 18px;
     color: var(--t2);
 }
-.wrapper .developer{
+
+.wrapper .developer {
     text-align: center;
     font-size: 20px;
 }
-.wrapper ul{
+
+.wrapper ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -24,11 +27,12 @@
 }
 
 @media screen and (min-width: 850px) {
-    .wrapper{
+    .wrapper {
         padding: 50px 0 70px 0;
     }
-   .wrapper p{
-    font-size: 23px;
-    margin: 40px 0;
-   }
+
+    .wrapper p {
+        font-size: 23px;
+        margin: 40px 0;
+    }
 }
