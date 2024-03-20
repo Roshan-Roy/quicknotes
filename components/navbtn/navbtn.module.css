@@ -6,6 +6,12 @@
   cursor:pointer;
 }
 
+@media screen and (min-width: 850px) {
+  .nav_btn{
+    display: none;
+  }
+}
+
 .nav_btn div {
   height: 4px;
   background-color: var(--t1);

@@ -22,3 +22,13 @@
     gap: 15px;
     font-size: 35px;
 }
+
+@media screen and (min-width: 850px) {
+    .wrapper{
+        padding: 50px 0 70px 0;
+    }
+   .wrapper p{
+    font-size: 23px;
+    margin: 40px 0;
+   }
+}

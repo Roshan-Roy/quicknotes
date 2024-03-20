@@ -10,4 +10,5 @@
     border-bottom: 20px solid var(--cb);
     border-top: 20px solid var(--cb);
     box-sizing: content-box;
+    cursor: pointer;
 }

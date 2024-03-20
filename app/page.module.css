@@ -48,6 +48,27 @@
     background-color: var(--pc);
     color: var(--t1);
 }
-.name{
+
+.name {
     color: var(--t1);
+}
+
+@media screen and (min-width: 850px) {
+    .container {
+        gap: 40px;
+    }
+
+    .container h2 {
+        font-size: 70px;
+    }
+
+    .container p {
+        font-size: 25px;
+    }
+
+    .link_container a {
+        width: 175px;
+        height: 60px;
+        font-size: 16px;
+    }
 }
