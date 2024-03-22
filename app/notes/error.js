@@ -3,7 +3,7 @@
 import styles from "./page.module.css"
 import { IoMdCloseCircleOutline } from "react-icons/io"
 
-const error = ({ error }) => {
+export default function Error({ error }) {
   return (
     <div className={styles.le_wrapper}>
       <div>
@@ -13,5 +13,3 @@ const error = ({ error }) => {
     </div>
   )
 }
-
-export default error
